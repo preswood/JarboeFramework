@@ -10,7 +10,14 @@ public class JarboePanel extends JPanel {
 	int X1, X2, Y1, Y2;
 	JarboeLine J=null;
 	JarboeLine[] JJ=null;
-	    public JarboePanel(int x1, int y1, int x2, int y2) {
+	
+	public JarboePanel()
+	{
+		super();
+	}
+	
+	public JarboePanel(int x1, int y1, int x2, int y2) {
+		super();
 		X1=x1;
 		Y1=y1;
 		X2=x2;
@@ -18,10 +25,12 @@ public class JarboePanel extends JPanel {
 	}
 	    
 	public JarboePanel(JarboeLine j) {
+		super();
 		J = j;
 	}
 	
-	public JarboePanel(JarboeLine ... jarboeLines) {
+	public JarboePanel(JarboeLine[] jarboeLines) {
+		super();
 		JJ = jarboeLines;
 	}
 

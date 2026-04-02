@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 
 
@@ -42,6 +43,20 @@ public class JarboeStyler {
 	    public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
 	    	g.drawOval(x, y, width, height);
 	    }
+	}
+	
+	public static JButton buttonTo9X(final JButton b)
+	{
+		b.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		b.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				b.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+			}
+			public void mouseReleased(MouseEvent e) {
+				b.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+			}
+		});
+		return b;
 	}
 	
 	//JButton

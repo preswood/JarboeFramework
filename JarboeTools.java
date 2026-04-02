@@ -1,14 +1,9 @@
 package jarboe;
-//JarboeFX is developed by Sean P. Emili
-//Version 0.0.1
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.Vector;
 
 public class JarboeTools {
 	private static String defaultFile;
@@ -59,7 +54,7 @@ public class JarboeTools {
 		return read(defaultFile);
 	}
 	
-	public static Vector<String> fread(String dir)
+	/*public static Vector<String> fread(String dir)
 	{
 		Vector<String> datiCaricati = new Vector<String>();
 		try {
@@ -73,7 +68,7 @@ public class JarboeTools {
 			bufferedReader.close();
 		} catch (IOException e) {}
 		return datiCaricati;
-	}
+	}*/
 	
 	public static boolean checkFile(String dir)
 	{
